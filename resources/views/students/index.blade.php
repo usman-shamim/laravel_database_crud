@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Students CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body class="container mt-5 bg-dark text-white p-4 rounded">
-    
+
     <h2>Add Students</h2>
 
     <form action="/students/store" method="POST">
         @csrf
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="text" name="phone" placeholder="Phone" required>
-        <button type="submit">Add Student</button>
+        <input type="text" name="name" placeholder="Name" class="form-control my-3" required>
+        <input type="text" name="email" placeholder="Email" class="form-control my-3" required>
+        <input type="text" name="phone" placeholder="Phone" class="form-control my-3" required>
+        <button type="submit" class="btn btn-success">Add Student</button>
     </form>
 
     <br>
@@ -52,7 +53,7 @@
             
         @endforeach
     </table>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>

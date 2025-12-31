@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Container\Attributes\DB;
+use Illuminate\Support\facades\DB;
 use Illuminate\Http\Request;
 
 class studentController extends Controller
@@ -18,7 +18,7 @@ class studentController extends Controller
         DB::table('students')->insert([
             'name' => $request->name,
             'email' => $request->email,
-            'phone' => $request->phone
+            'phone' => $request->contact
         ]);
         return redirect('/students')->with('success','Student Added Successfully');
     }
@@ -35,7 +35,7 @@ class studentController extends Controller
             ->update([
                 'name' => $request->name,
                 'email' => $request->email,
-                'phone' => $request->phone
+                'phone' => $request->contact
             ]);
 
         return redirect('/students')->with('success', 'Student Update Successfully');

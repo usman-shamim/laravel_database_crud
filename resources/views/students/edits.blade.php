@@ -7,7 +7,7 @@
 
         <input type="email" name="email" value="{{ $student->email }}" required class="form-control my-3">
 
-        <input type="text" name="phone" value="{{ $student->phone }}" required class="form-control my-3">
+        <input type="text" name="phone" value="{{ $student->contact }}" required class="form-control my-3">
 
         <button type="submit" class="btn btn-warning">Update Student</button>
     </form>
