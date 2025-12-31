@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/students', [studentController::class, 'index']);
-Route::get('/students/store', [studentController::class, 'store']);
+Route::post('/students/store', [studentController::class, 'store']);
 Route::get('/students/edit/{id}', [studentController::class, 'edit']);
-Route::get('/students/update/{id}', [studentController::class, 'update']);
+Route::post('/students/update/{id}', [studentController::class, 'update']);
 Route::get('/students/delete/{id}', [studentController::class, 'destroy']);

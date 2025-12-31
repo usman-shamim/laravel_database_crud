@@ -15,7 +15,7 @@
         @csrf
         <input type="text" name="name" placeholder="Name" class="form-control my-3" required>
         <input type="text" name="email" placeholder="Email" class="form-control my-3" required>
-        <input type="text" name="phone" placeholder="Phone" class="form-control my-3" required>
+        <input type="text" name="contact" placeholder="Phone number" class="form-control my-3" required>
         <button type="submit" class="btn btn-success">Add Student</button>
     </form>
 
@@ -36,7 +36,7 @@
             <th>Action</th>
         </tr>
 
-        @foreach ($students as $students)
+        @foreach ($students as $student)
         <tr>
             <td>{{ $student->id}}</td>
             <td>{{ $student->name}}</td>

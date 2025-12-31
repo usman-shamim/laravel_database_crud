@@ -18,7 +18,7 @@ class studentController extends Controller
         DB::table('students')->insert([
             'name' => $request->name,
             'email' => $request->email,
-            'phone' => $request->contact
+            'contact' => $request->contact
         ]);
         return redirect('/students')->with('success','Student Added Successfully');
     }
@@ -35,7 +35,7 @@ class studentController extends Controller
             ->update([
                 'name' => $request->name,
                 'email' => $request->email,
-                'phone' => $request->contact
+                'contact' => $request->contact
             ]);
 
         return redirect('/students')->with('success', 'Student Update Successfully');
